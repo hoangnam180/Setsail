@@ -1,0 +1,123 @@
+.package{
+    overflow: hidden;
+}
+.package-items{
+    transition: transform .25s linear;
+    -webkit-transition: transform .25s linear;
+    -moz-transition: transform .25s linear;
+}
+.package-item{
+    --width-item:20px;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    
+}
+.package-img img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    vertical-align: top;
+    transform: scale(1);
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+}
+.package-img{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+}
+.package-img:hover img{
+    transform: scale(1.03);
+}
+
+.package-tours{
+    background-color: var(--primary-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.package-tour{
+    padding: 1.2rem 0 1.2rem 2.5rem;
+    font-size: 1.4rem;
+    color: var(--white-color);
+}
+.package-tour span{
+    margin-left: 0.5rem;
+}
+
+
+.package-text{
+    padding: 3.1rem 2.5rem;
+    background-color: var(--white-color);
+    box-shadow: inset 0px 0px 3px 0px rgb(0 0 0 / 10%);
+}
+.package-title{
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+.package-des{
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    text-overflow : ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-width: 100%;
+    text-align: left;
+    max-width: 26rem;
+}
+.package-vote span{
+    margin-left: 0.7rem;
+}
+.package-about{
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    display: flex;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.package-price{
+    margin-right: 1.7rem;
+}
+.package-vote{
+    margin-right: 1rem;
+}
+
+.dots{
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+}
+.dot{
+    outline: none;
+    border: none;
+    margin-right: 1.5rem;
+    border-radius: 50% ;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all .25s linear;
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+}
+
+.dot span{
+    display: block;
+    border-radius: 50% ;
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-color);
+    border: none;
+}
+.dot.active{
+    opacity: 1;
+}
+.dot:hover{
+    opacity: 1;
+}
+

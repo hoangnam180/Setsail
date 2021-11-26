@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.4rem;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    color: #505050;
+}
+:root {
+    --primary-color:#3fd0d4;
+    --text-color:#212121;
+    --white-color:#fff;
+    --text-footer:#a9a9a9;
+    
+}
+
+
+
+
+.right{
+    position: absolute;
+    right: 0;
+    padding: 0 2rem;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+.trans{
+    -webkit-animation-name: trans;
+    -webkit-animation-duration: 1.2s;
+    animation-name: trans;
+    animation-duration: 1.2s;
+
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: 0.6} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+      from{
+          opacity: 0.6;
+      }
+      to{
+         opacity: 1;
+      }
+  }
+  @-webkit-keyframes trans {
+    0% {
+    
+        opacity: 0;
+        transform: translateY(50px);
+        } 
+   
+    100% {
+      
+        opacity: 0;
+        opacity: 1;
+        transform: translateY(0px);
+        
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+     
+        opacity: 0;
+        transform: translateY(-50px);
+        } 
+   
+    100% {
+     
+        opacity: 1;
+        transform: translateY(0);
+        
+    }
+  }
+
+
+  @keyframes breath {
+    0%   { background-size:auto 100%; }
+    50% { background-size:auto 140%; }
+    100% { background-size:auto 100%; }
+  }
+  
+  @-webkit-keyframes breath{
+    0%   { background-size:auto 100%; }
+    50% { background-size:auto 140%; }
+    100% { background-size:auto 100%; }
+  }
+ 
+
+
+ 

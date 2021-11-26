@@ -1,0 +1,97 @@
+.parallax{
+    padding-top: 23%;
+    padding-top: 108px;
+    padding-bottom: 107px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 0px;
+}
+.parallax-w{
+    transition: transform .8s linear;
+    -webkit-transition: transform .8s linear;
+    -moz-transition: transform .8s linear;
+}
+.parallax-text{
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--white-color);
+}
+.parallax-text-content{
+    font-size: 6.5rem;
+    font-weight: 600;
+}
+.parallax-text-des{
+    font-size: 1.7rem;
+    text-align: center;
+    text-indent : 20px;
+    line-height: 1.6;
+}
+
+
+.parallax-reviewer{
+    background-color: var(--white-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    margin: 2.5rem 0;
+}
+.parallax-avartar{
+    margin-right: 2rem;
+    width: auto;
+    height: auto;
+}
+.parallax-info{
+
+}
+.info-name{
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 2.8rem;
+    margin-bottom: 1rem;
+}
+.info-name a{
+    transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -webkit-transition: all .25s linear;
+}
+.info-name a:hover{
+    color: var(--primary-color);
+} 
+.info-name a{
+   text-decoration: none;
+   color: var(--text-color);
+}
+.info-vote{
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    line-height: 1.3rem;
+}
+
+.info-des{
+    font-size: 1.4rem;
+    line-height: 1.7;
+    margin-top: 1.1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+}
+.author{
+    margin-top:1.5rem ;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.fluit.x2{
+    padding-top: 15.5rem;
+    padding-bottom:6.8rem ;
+}
+
+.parallax-text-des.text{
+    max-width: 70%;
+    margin: 0 auto;
+}

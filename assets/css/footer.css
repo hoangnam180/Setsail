@@ -1,0 +1,138 @@
+.footer-wrap{
+    background-color: #212121;
+}
+
+.footer{
+    padding: 106px 110px 78px;
+}
+
+.footer-logo{
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+    margin-bottom: 2rem;
+}
+.footer-logo img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.footer-des{
+    font-size: 1.7rem;
+    line-height: 1.64em;
+    font-weight: 400;
+    color: var(--text-footer);
+    margin: 0 0 17px 0;
+}
+.footer-info{
+    display: flex;
+    flex-direction: column;
+
+}
+.footer-info a{
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 1.4rem;
+    line-height: 2;
+    transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -webkit-transition: all .25s linear;
+}
+.footer-info a span{
+    padding-left: 1rem;
+}
+.footer-item{
+ 
+}
+.footer-item-name{
+    font-size: 1.8rem;
+    left: 1.8rem;
+    font-weight: 600;
+    color: var(--white-color);
+    margin-bottom: 2.6rem;
+}
+.footer-item-addrres a{
+    color: var(--text-footer);
+    font-size: 1.4rem;
+    line-height: 2;
+    text-decoration: none;
+    transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -webkit-transition: all .25s linear;
+}
+.footer-item-day a{
+    font-size: 1.4rem;
+    color: var(--white-color);
+    line-height: 2;
+    text-decoration: none ;
+    transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -webkit-transition: all .25s linear;
+}
+
+.footer-addr{
+    margin-bottom: 2.5rem;
+}
+
+.footer-addr a:hover{
+    color: var(--primary-color);
+}
+.footer-info a:hover{
+    color: var(--primary-color);
+}
+
+.form{
+
+}
+.form-group{
+    margin-bottom: 6px;
+    position: relative;
+}
+.form-icon{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: var(--white-color);
+    font-size: 1.2rem;
+}
+.form-control{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(168, 167, 167, 0.418);
+    color: var(--white-color);
+    padding: 1.2rem 1.6rem 1.2rem 4.7rem;
+    border: none;
+    font-size: 1.3rem;
+    outline: none;
+}
+input::placeholder{
+    color: #fff;
+  }
+
+#button{
+    width: 100%;
+    height: 100%;
+    padding: 1.6rem 0;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: .1em;
+    transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -webkit-transition: all .25s linear;
+}
+#button:hover{
+    background-color: var(--white-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+.form-message{
+
+}
