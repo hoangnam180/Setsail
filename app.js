@@ -17,9 +17,11 @@ window.addEventListener("load",function(){
     const Itemsubnav = document.querySelectorAll('.bottom-header-subnav');
     const [...Listsubnavinner] = document.querySelectorAll('.bottom-header-subnav-item.js');
     const Itemsubnavinner = document.querySelectorAll('.bottom-header-subnav-inner');
-    const Itemslink = document.querySelector('.bottom-header-item-link');
     const arow = document.querySelectorAll('.arow-nav');
     const arowinner = document.querySelectorAll('.arow-nav-inner');
+    const Modal = document.querySelector('.modal');
+    const OpenModal = document.querySelector('.fluit-video-image button');
+    const ModalVideo = document.querySelector('.modal-container iframe');
     let temp = 0; // bien cua slider bottom
     let positionX = 0; 
     let index = 0;
@@ -36,7 +38,10 @@ window.addEventListener("load",function(){
 
 Listsubnavinner.forEach(function(list,index){
     list.onclick = function(e){
-        Itemsubnavinner[index].classList.toggle('open')
+
+        if(e.target == e.currentTarget || e.target == this){
+            Itemsubnavinner[index].classList.toggle('open')
+        }
         arowinner[index].classList.toggle('rota')
     }
 })
@@ -55,9 +60,18 @@ Listsubnavinner.forEach(function(list,index){
         };
   });
 
-  function handleOpenNav(index){
-    
-  }
+    OpenModal.onclick = (e)=>{
+        Modal.classList.add('open');
+    }
+
+    Modal.onclick = (e) =>{
+        if(this){
+            e.preventDefault();
+            Modal.classList.remove('open');
+            ModalVideo.src = ModalVideo.src ;
+        }
+    }
+ 
  // START   
     function start(){
        showSlides();

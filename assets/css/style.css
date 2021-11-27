@@ -9,6 +9,13 @@
     height: 4.6rem;
     background-color: #1c1c1c;
 }
+
+.fluit-video-image button{
+    display: block;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
 .top-header-left{
     
 }

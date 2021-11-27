@@ -1,0 +1,38 @@
+.modal{
+    position: fixed;
+    inset: 0 0 0 0;
+    display: none;
+}
+.modal.open{
+    display: block;
+}
+.modal{
+    position: fixed;
+    inset: 0 0 0 0;
+}
+.modal-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-container{
+    position: absolute;
+    padding: 0 2rem;
+    border: none;
+    outline: none;
+    width: auto;
+    height: auto;
+    vertical-align: top;
+}
+
+iframe{
+    width : 96rem ; 
+    height: 54rem;
+    border: none;
+}

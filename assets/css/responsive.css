@@ -1,5 +1,5 @@
 
-@media only screen and (min-width: 1100px){
+@media only screen and (min-width: 1000px){
     
     .bottom-header-item:hover .bottom-header-item-link.underline::after{
         width: 100%;
@@ -79,6 +79,11 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1300px){
+    
+    .bottom-header-nav-inner{
+        display: none;
+      
+    }
     .bottom-header-item{
         padding: 2rem 2.3rem;
     }
@@ -97,6 +102,12 @@
 
 /* mobile table */
 @media only screen and (max-width : 1023px){
+
+    iframe{
+        border: none;
+        width: 75rem;
+        height: 42.2rem;
+    }
     .top-header{
         display: none;
     }
@@ -367,4 +378,11 @@
     .dot2{
         display: none;
     }
+
+    iframe{
+        border: none;
+        width: 49rem;
+        height: 42.2rem;
+    }
+
 }

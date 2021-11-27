@@ -2,9 +2,9 @@
     overflow: hidden;
 }
 .package-items{
-    transition: transform .25s linear;
-    -webkit-transition: transform .25s linear;
-    -moz-transition: transform .25s linear;
+    transition: transform .5s linear;
+    -webkit-transition: transform .5s linear;
+    -moz-transition: transform .5s linear;
 }
 .package-item{
     --width-item:20px;
