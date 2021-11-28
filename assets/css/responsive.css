@@ -1,6 +1,5 @@
 
 @media only screen and (min-width: 1000px){
-    
     .bottom-header-item:hover .bottom-header-item-link.underline::after{
         width: 100%;
         background-color: var(--primary-color);
@@ -211,7 +210,7 @@
         background-color: #2121212e;
     }
     .slider-btn{
-        transform: translateX(77px);
+        transform: translateX(83px);
     }
     .slider-arrow{
         display: none;

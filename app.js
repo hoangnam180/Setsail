@@ -22,6 +22,14 @@ window.addEventListener("load",function(){
     const Modal = document.querySelector('.modal');
     const OpenModal = document.querySelector('.fluit-video-image button');
     const ModalVideo = document.querySelector('.modal-container iframe');
+    const sidebars = document.querySelector('.sidebars');
+    const barOpen = document.querySelector('.bottom-header-right-item.js');
+    const sidebarClose = document.querySelector('.sidebar-close');
+    const sidebarContent = document.querySelector('.sidebar-content');
+    const btn_theme = document.querySelector('.slider-btn.theme');
+    const btnButton= document.querySelectorAll('.slider-btn');
+    const btnSVG= document.querySelectorAll('.slider-btn.theme svg');
+    const theme = document.querySelector('.theme');
     let temp = 0; // bien cua slider bottom
     let positionX = 0; 
     let index = 0;
@@ -32,10 +40,78 @@ window.addEventListener("load",function(){
     let widthparallaxs = getoffsetwidthWparallaxs();
     let widthwrappara =  getoffsetwidthparallaxs();
     let minlengpara = Math.round(widthparallaxs/widthwrappara);
+    let svgIndex = 0;
+ 
+ // START   
+    function start(){
+       showSlides();
+       setInterval(showSlides, 5000); 
+       setInterval(function(){
+           handleChangslide(1);
+       }, 5000); 
+       handleSlidedot();
+       setInterval(function(){
+        if(settimeslide >= (parallaxs_leng / minlengpara)){
+            settimeslide = 0;
+        }
+        handleSlidedots(settimeslide)
+        settimeslide++;
+        
+    }, 5000); 
+
+       setInterval(function(){
+         if(indextime >= 3){
+            indextime = 0;
+        }
+            document.querySelector('.dot2.active').classList.remove('active')
+            dotList[indextime].classList.add('active');
+            indextime++;
+            
+    }, 5000); 
+
+    handlechangSVG();
+    }
 
 
 
+    //theme
+btn_theme.onclick = (e)=>{
+        SVGonclick();
+}
 
+
+function SVGonclick(){
+    theme.classList.toggle('open')
+    for(let i = 0;i<btnButton.length;i++){
+        btnButton[i].classList.toggle('active');
+    }
+    handlechangSVG();
+}
+
+function handlechangSVG(){
+    for(let i = 0;i<btnSVG.length;i++){
+        btnSVG[i].style.display = "none";
+    }
+    svgIndex ++;
+        if(svgIndex > btnSVG.length){
+            svgIndex = 1;
+        }
+        btnSVG[svgIndex-1].style.display = "block";
+       
+}
+barOpen.onclick = (e)=>{
+    e.preventDefault();
+    sidebars.classList.add('open');
+}
+sidebars.onclick = (e)=>{
+   if(e.target == e.currentTarget){
+    sidebars.classList.remove('open');
+   }
+}
+
+sidebarClose.onclick = (e)=>{
+    sidebars.classList.remove('open');
+}
 Listsubnavinner.forEach(function(list,index){
     list.onclick = function(e){
 
@@ -71,35 +147,6 @@ Listsubnavinner.forEach(function(list,index){
             ModalVideo.src = ModalVideo.src ;
         }
     }
- 
- // START   
-    function start(){
-       showSlides();
-       setInterval(showSlides, 5000); 
-       setInterval(function(){
-           handleChangslide(1);
-       }, 5000); 
-       handleSlidedot();
-       setInterval(function(){
-        if(settimeslide >= (parallaxs_leng / minlengpara)){
-            settimeslide = 0;
-        }
-        handleSlidedots(settimeslide)
-        settimeslide++;
-        
-    }, 5000); 
-
-       setInterval(function(){
-         if(indextime >= 3){
-            indextime = 0;
-        }
-            document.querySelector('.dot2.active').classList.remove('active')
-            dotList[indextime].classList.add('active');
-            indextime++;
-            
-    }, 5000); 
-    }
-
     // Lấy width của slide 
     function getoffsetwidth(){
         let width = package_item[0].offsetWidth;

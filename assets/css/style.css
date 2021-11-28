@@ -418,44 +418,6 @@
     left: 4rem;
 }
 
-.slider-btn{
-    font-family: 'Heebo', sans-serif;
-    position: absolute;
-    right: 0;
-    width: 115px;
-    font-size: 1.1rem;
-    padding: 1.3rem 1rem;
-    transform: translateX(3px);
-    display: flex;
-    align-items: center;
-    position: fixed;
-    z-index: 1000;
-}
-.slider-btn span{
-    margin-left: 1rem;
-}
-.slider-btn i{
-    font-size: 1.5rem;
-}
-.slider-btn.sidebar{
-    background-color: #EF2853;
-    top: 26.5%;
-    color:var(--white-color);
-}
-.slider-btn.sidebar i{
-    transform: rotate(160deg);
-    font-size: 1.8rem;
-    font-weight: 700;
-}
-.slider-btn.purchase{
-    top: 32.3%;
-    background-color: var(--white-color);
-    
-}
-.slider-btn.purchase i{
-   color:#EF2853 ;
-    
-}
 .fluit.x2.resort{
     padding-top: 12.5rem;
 }

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 23,
+            "activePatchIndex": 84,
             "patches": [
                 {
                     "date": 1637993082837,
@@ -100,6 +100,250 @@
                 {
                     "date": 1638006085368,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,11 +65,10 @@\n     }\r\n \r\n     Modal.onclick = (e) =>{\r\n         if(this){\r\n-            // e.preventDefault();\r\n+            e.preventDefault();\r\n             Modal.classList.remove('open');\r\n-            // ModalVideo.src = '';\r\n             ModalVideo.src = ModalVideo.src ;\r\n         }\r\n     }\r\n  \r\n"
+                },
+                {
+                    "date": 1638077189290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,10 @@\n     const arowinner = document.querySelectorAll('.arow-nav-inner');\r\n     const Modal = document.querySelector('.modal');\r\n     const OpenModal = document.querySelector('.fluit-video-image button');\r\n     const ModalVideo = document.querySelector('.modal-container iframe');\r\n+    const sidebars = document.querySelector('.sidebars');\r\n+    console.log(sidebars)\r\n     let temp = 0; // bien cua slider bottom\r\n     let positionX = 0; \r\n     let index = 0;\r\n     let settimeslide = 0;\r\n"
+                },
+                {
+                    "date": 1638077395473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     const Modal = document.querySelector('.modal');\r\n     const OpenModal = document.querySelector('.fluit-video-image button');\r\n     const ModalVideo = document.querySelector('.modal-container iframe');\r\n     const sidebars = document.querySelector('.sidebars');\r\n-    console.log(sidebars)\r\n+    const barOpen = document.querySelector('.bottom-header-right-item.js');\r\n     let temp = 0; // bien cua slider bottom\r\n     let positionX = 0; \r\n     let index = 0;\r\n     let settimeslide = 0;\r\n@@ -36,9 +36,11 @@\n     let minlengpara = Math.round(widthparallaxs/widthwrappara);\r\n \r\n \r\n \r\n-\r\n+sidebars.onclick = ()=>{\r\n+    this.classList.remove('open')\r\n+}\r\n Listsubnavinner.forEach(function(list,index){\r\n     list.onclick = function(e){\r\n \r\n         if(e.target == e.currentTarget || e.target == this){\r\n"
+                },
+                {
+                    "date": 1638077463115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,11 +35,13 @@\n     let widthwrappara =  getoffsetwidthparallaxs();\r\n     let minlengpara = Math.round(widthparallaxs/widthwrappara);\r\n \r\n \r\n-\r\n+barOpen.onclick = ()=>{\r\n+    this.classList.add('open');\r\n+}\r\n sidebars.onclick = ()=>{\r\n-    this.classList.remove('open')\r\n+    this.classList.remove('open');\r\n }\r\n Listsubnavinner.forEach(function(list,index){\r\n     list.onclick = function(e){\r\n \r\n"
+                },
+                {
+                    "date": 1638077494225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,9 @@\n     let minlengpara = Math.round(widthparallaxs/widthwrappara);\r\n \r\n \r\n barOpen.onclick = ()=>{\r\n+    e.preventDefault();\r\n     this.classList.add('open');\r\n }\r\n sidebars.onclick = ()=>{\r\n     this.classList.remove('open');\r\n"
+                },
+                {
+                    "date": 1638077551442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n \r\n \r\n barOpen.onclick = ()=>{\r\n     e.preventDefault();\r\n-    this.classList.add('open');\r\n+    sidebars.classList.add('open');\r\n }\r\n sidebars.onclick = ()=>{\r\n     this.classList.remove('open');\r\n }\r\n"
+                },
+                {
+                    "date": 1638077617390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,10 @@\n \r\n \r\n barOpen.onclick = ()=>{\r\n     e.preventDefault();\r\n-    sidebars.classList.add('open');\r\n+    alert('thanh cong')\r\n+    // sidebars.classList.add('open');\r\n }\r\n sidebars.onclick = ()=>{\r\n     this.classList.remove('open');\r\n }\r\n"
+                },
+                {
+                    "date": 1638077636276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n     let widthwrappara =  getoffsetwidthparallaxs();\r\n     let minlengpara = Math.round(widthparallaxs/widthwrappara);\r\n \r\n \r\n-barOpen.onclick = ()=>{\r\n+barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n     alert('thanh cong')\r\n     // sidebars.classList.add('open');\r\n }\r\n"
+                },
+                {
+                    "date": 1638077646337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,9 @@\n \r\n \r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n-    alert('thanh cong')\r\n-    // sidebars.classList.add('open');\r\n+    sidebars.classList.add('open');\r\n }\r\n sidebars.onclick = ()=>{\r\n     this.classList.remove('open');\r\n }\r\n"
+                },
+                {
+                    "date": 1638077672593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n     sidebars.classList.add('open');\r\n }\r\n-sidebars.onclick = ()=>{\r\n+sidebars.onclick = (e)=>{\r\n     this.classList.remove('open');\r\n }\r\n Listsubnavinner.forEach(function(list,index){\r\n     list.onclick = function(e){\r\n"
+                },
+                {
+                    "date": 1638077684378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,9 @@\n     e.preventDefault();\r\n     sidebars.classList.add('open');\r\n }\r\n sidebars.onclick = (e)=>{\r\n+    console.log(e.target)\r\n     this.classList.remove('open');\r\n }\r\n Listsubnavinner.forEach(function(list,index){\r\n     list.onclick = function(e){\r\n"
+                },
+                {
+                    "date": 1638077718294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,10 +40,9 @@\n     e.preventDefault();\r\n     sidebars.classList.add('open');\r\n }\r\n sidebars.onclick = (e)=>{\r\n-    console.log(e.target)\r\n-    this.classList.remove('open');\r\n+    sidebars.classList.remove('open');\r\n }\r\n Listsubnavinner.forEach(function(list,index){\r\n     list.onclick = function(e){\r\n \r\n"
+                },
+                {
+                    "date": 1638077846421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,11 @@\n     e.preventDefault();\r\n     sidebars.classList.add('open');\r\n }\r\n sidebars.onclick = (e)=>{\r\n+   if(this){\r\n     sidebars.classList.remove('open');\r\n+   }\r\n }\r\n Listsubnavinner.forEach(function(list,index){\r\n     list.onclick = function(e){\r\n \r\n"
+                },
+                {
+                    "date": 1638077911375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     e.preventDefault();\r\n     sidebars.classList.add('open');\r\n }\r\n sidebars.onclick = (e)=>{\r\n-   if(this){\r\n+   if(sidebars){\r\n     sidebars.classList.remove('open');\r\n    }\r\n }\r\n Listsubnavinner.forEach(function(list,index){\r\n"
+                },
+                {
+                    "date": 1638077971576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     e.preventDefault();\r\n     sidebars.classList.add('open');\r\n }\r\n sidebars.onclick = (e)=>{\r\n-   if(sidebars){\r\n+   if(e.target == this){\r\n     sidebars.classList.remove('open');\r\n    }\r\n }\r\n Listsubnavinner.forEach(function(list,index){\r\n"
+                },
+                {
+                    "date": 1638078002407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     e.preventDefault();\r\n     sidebars.classList.add('open');\r\n }\r\n sidebars.onclick = (e)=>{\r\n-   if(e.target == this){\r\n+   if(e.target == e.currentTarget){\r\n     sidebars.classList.remove('open');\r\n    }\r\n }\r\n Listsubnavinner.forEach(function(list,index){\r\n"
+                },
+                {
+                    "date": 1638078094436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,9 @@\n     const OpenModal = document.querySelector('.fluit-video-image button');\r\n     const ModalVideo = document.querySelector('.modal-container iframe');\r\n     const sidebars = document.querySelector('.sidebars');\r\n     const barOpen = document.querySelector('.bottom-header-right-item.js');\r\n+    const sidebarClose = document.querySelector('.sidebar-close');\r\n     let temp = 0; // bien cua slider bottom\r\n     let positionX = 0; \r\n     let index = 0;\r\n     let settimeslide = 0;\r\n"
+                },
+                {
+                    "date": 1638078114875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,8 +45,12 @@\n    if(e.target == e.currentTarget){\r\n     sidebars.classList.remove('open');\r\n    }\r\n }\r\n+\r\n+sidebarClose.onclick = (e)=>{\r\n+    sidebars.classList.remove('open');\r\n+}\r\n Listsubnavinner.forEach(function(list,index){\r\n     list.onclick = function(e){\r\n \r\n         if(e.target == e.currentTarget || e.target == this){\r\n"
+                },
+                {
+                    "date": 1638078616064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n     const ModalVideo = document.querySelector('.modal-container iframe');\r\n     const sidebars = document.querySelector('.sidebars');\r\n     const barOpen = document.querySelector('.bottom-header-right-item.js');\r\n     const sidebarClose = document.querySelector('.sidebar-close');\r\n+    const sidebarContent = document.querySelector('.sidebar-content');\r\n     let temp = 0; // bien cua slider bottom\r\n     let positionX = 0; \r\n     let index = 0;\r\n     let settimeslide = 0;\r\n"
+                },
+                {
+                    "date": 1638078696002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,13 +44,15 @@\n }\r\n sidebars.onclick = (e)=>{\r\n    if(e.target == e.currentTarget){\r\n     sidebars.classList.remove('open');\r\n+    sidebarContent.classList.add('fadeInlea')\r\n    }\r\n }\r\n \r\n sidebarClose.onclick = (e)=>{\r\n     sidebars.classList.remove('open');\r\n+    sidebarContent.classList.add('fadeInlea')\r\n }\r\n Listsubnavinner.forEach(function(list,index){\r\n     list.onclick = function(e){\r\n \r\n"
+                },
+                {
+                    "date": 1638078856117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,15 +44,14 @@\n }\r\n sidebars.onclick = (e)=>{\r\n    if(e.target == e.currentTarget){\r\n     sidebars.classList.remove('open');\r\n-    sidebarContent.classList.add('fadeInlea')\r\n+  \r\n    }\r\n }\r\n \r\n sidebarClose.onclick = (e)=>{\r\n     sidebars.classList.remove('open');\r\n-    sidebarContent.classList.add('fadeInlea')\r\n }\r\n Listsubnavinner.forEach(function(list,index){\r\n     list.onclick = function(e){\r\n \r\n"
+                },
+                {
+                    "date": 1638079061326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,16 @@\n }\r\n sidebars.onclick = (e)=>{\r\n    if(e.target == e.currentTarget){\r\n     sidebars.classList.remove('open');\r\n-  \r\n+    sidebarContent.animate([\r\n+        // keyframes\r\n+        { transform: 'translateY(0px)' },\r\n+        { transform: 'translateY(-100%)' }\r\n+      ], {\r\n+        // timing options\r\n+        duration: 500\r\n+      });\r\n    }\r\n }\r\n \r\n sidebarClose.onclick = (e)=>{\r\n"
+                },
+                {
+                    "date": 1638079108649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     sidebars.classList.remove('open');\r\n     sidebarContent.animate([\r\n         // keyframes\r\n         { transform: 'translateY(0px)' },\r\n-        { transform: 'translateY(-100%)' }\r\n+        { transform: 'translateY(100%)' }\r\n       ], {\r\n         // timing options\r\n         duration: 500\r\n       });\r\n"
+                },
+                {
+                    "date": 1638079157697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     sidebars.classList.remove('open');\r\n     sidebarContent.animate([\r\n         // keyframes\r\n         { transform: 'translateY(0px)' },\r\n-        { transform: 'translateY(100%)' }\r\n+        { transform: 'translateY(100px)' }\r\n       ], {\r\n         // timing options\r\n         duration: 500\r\n       });\r\n"
+                },
+                {
+                    "date": 1638079170091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         { transform: 'translateY(0px)' },\r\n         { transform: 'translateY(100px)' }\r\n       ], {\r\n         // timing options\r\n-        duration: 500\r\n+        duration: 1000\r\n       });\r\n    }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1638079185205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,16 +44,8 @@\n }\r\n sidebars.onclick = (e)=>{\r\n    if(e.target == e.currentTarget){\r\n     sidebars.classList.remove('open');\r\n-    sidebarContent.animate([\r\n-        // keyframes\r\n-        { transform: 'translateY(0px)' },\r\n-        { transform: 'translateY(100px)' }\r\n-      ], {\r\n-        // timing options\r\n-        duration: 1000\r\n-      });\r\n    }\r\n }\r\n \r\n sidebarClose.onclick = (e)=>{\r\n"
+                },
+                {
+                    "date": 1638119371137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n     const sidebars = document.querySelector('.sidebars');\r\n     const barOpen = document.querySelector('.bottom-header-right-item.js');\r\n     const sidebarClose = document.querySelector('.sidebar-close');\r\n     const sidebarContent = document.querySelector('.sidebar-content');\r\n+    const btn_theme = document.querySelector('.slider-btn.theme');\r\n     let temp = 0; // bien cua slider bottom\r\n     let positionX = 0; \r\n     let index = 0;\r\n     let settimeslide = 0;\r\n"
+                },
+                {
+                    "date": 1638119450319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n     const barOpen = document.querySelector('.bottom-header-right-item.js');\r\n     const sidebarClose = document.querySelector('.sidebar-close');\r\n     const sidebarContent = document.querySelector('.sidebar-content');\r\n     const btn_theme = document.querySelector('.slider-btn.theme');\r\n+    const theme = document.querySelector('.theme');\r\n     let temp = 0; // bien cua slider bottom\r\n     let positionX = 0; \r\n     let index = 0;\r\n     let settimeslide = 0;\r\n@@ -38,8 +39,13 @@\n     let widthwrappara =  getoffsetwidthparallaxs();\r\n     let minlengpara = Math.round(widthparallaxs/widthwrappara);\r\n \r\n \r\n+//theme\r\n+btn_theme.onclick = (e)=>{\r\n+\r\n+}\r\n+\r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n     sidebars.classList.add('open');\r\n }\r\n"
+                },
+                {
+                    "date": 1638119512988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n \r\n \r\n //theme\r\n btn_theme.onclick = (e)=>{\r\n-\r\n+    theme.classList.toggle('open')\r\n }\r\n \r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1638119698306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,9 @@\n \r\n //theme\r\n btn_theme.onclick = (e)=>{\r\n     theme.classList.toggle('open')\r\n+    this.classList.toggle('active')\r\n }\r\n \r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1638119708221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n \r\n //theme\r\n btn_theme.onclick = (e)=>{\r\n     theme.classList.toggle('open')\r\n-    this.classList.toggle('active')\r\n+    btn_theme.classList.toggle('active')\r\n }\r\n \r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1638119751256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n     const barOpen = document.querySelector('.bottom-header-right-item.js');\r\n     const sidebarClose = document.querySelector('.sidebar-close');\r\n     const sidebarContent = document.querySelector('.sidebar-content');\r\n     const btn_theme = document.querySelector('.slider-btn.theme');\r\n+    const btn_theme = document.querySelectorAll('.slider-btn');\r\n     const theme = document.querySelector('.theme');\r\n     let temp = 0; // bien cua slider bottom\r\n     let positionX = 0; \r\n     let index = 0;\r\n"
+                },
+                {
+                    "date": 1638119782966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     const barOpen = document.querySelector('.bottom-header-right-item.js');\r\n     const sidebarClose = document.querySelector('.sidebar-close');\r\n     const sidebarContent = document.querySelector('.sidebar-content');\r\n     const btn_theme = document.querySelector('.slider-btn.theme');\r\n-    const btn_theme = document.querySelectorAll('.slider-btn');\r\n+    const btnButton= document.querySelectorAll('.slider-btn');\r\n     const theme = document.querySelector('.theme');\r\n     let temp = 0; // bien cua slider bottom\r\n     let positionX = 0; \r\n     let index = 0;\r\n"
+                },
+                {
+                    "date": 1638119882697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,11 @@\n \r\n //theme\r\n btn_theme.onclick = (e)=>{\r\n     theme.classList.toggle('open')\r\n-    btn_theme.classList.toggle('active')\r\n+    for(let i = 0;i<btnButton.length;i++){\r\n+        btnButton[i].classList.toggle('active');\r\n+    }\r\n }\r\n \r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1638119967499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n     const sidebarClose = document.querySelector('.sidebar-close');\r\n     const sidebarContent = document.querySelector('.sidebar-content');\r\n     const btn_theme = document.querySelector('.slider-btn.theme');\r\n     const btnButton= document.querySelectorAll('.slider-btn');\r\n+    const btnSVG= document.querySelectorAll('.slider-btn.theme svg');\r\n     const theme = document.querySelector('.theme');\r\n     let temp = 0; // bien cua slider bottom\r\n     let positionX = 0; \r\n     let index = 0;\r\n"
+                },
+                {
+                    "date": 1638120022231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,8 +47,11 @@\n     theme.classList.toggle('open')\r\n     for(let i = 0;i<btnButton.length;i++){\r\n         btnButton[i].classList.toggle('active');\r\n     }\r\n+    for(let i = 0;i<btnSVG.length;i++){\r\n+        btnButton[i].style.display = \"none\";\r\n+    }\r\n }\r\n \r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1638120066354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n     for(let i = 0;i<btnButton.length;i++){\r\n         btnButton[i].classList.toggle('active');\r\n     }\r\n     for(let i = 0;i<btnSVG.length;i++){\r\n-        btnButton[i].style.display = \"none\";\r\n+        btnSVG[i].style.display = \"none\";\r\n     }\r\n }\r\n \r\n barOpen.onclick = (e)=>{\r\n"
+                },
+                {
+                    "date": 1638120185767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,15 +43,21 @@\n \r\n \r\n //theme\r\n btn_theme.onclick = (e)=>{\r\n+    let svgIndex = 0;\r\n     theme.classList.toggle('open')\r\n     for(let i = 0;i<btnButton.length;i++){\r\n         btnButton[i].classList.toggle('active');\r\n     }\r\n     for(let i = 0;i<btnSVG.length;i++){\r\n         btnSVG[i].style.display = \"none\";\r\n     }\r\n+    svgIndex ++;\r\n+        if(svgIndex > slides.length){\r\n+            svgIndex = 1;\r\n+        }\r\n+        slides[svgIndex-1].style.display = \"block\";\r\n }\r\n \r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1638120218872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,8 +55,9 @@\n     svgIndex ++;\r\n         if(svgIndex > slides.length){\r\n             svgIndex = 1;\r\n         }\r\n+        console.log(svgIndex)\r\n         slides[svgIndex-1].style.display = \"block\";\r\n }\r\n \r\n barOpen.onclick = (e)=>{\r\n"
+                },
+                {
+                    "date": 1638120239937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n         if(svgIndex > slides.length){\r\n             svgIndex = 1;\r\n         }\r\n         console.log(svgIndex)\r\n-        slides[svgIndex-1].style.display = \"block\";\r\n+        btnSVG[svgIndex-1].style.display = \"block\";\r\n }\r\n \r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1638120271236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,17 +48,8 @@\n     theme.classList.toggle('open')\r\n     for(let i = 0;i<btnButton.length;i++){\r\n         btnButton[i].classList.toggle('active');\r\n     }\r\n-    for(let i = 0;i<btnSVG.length;i++){\r\n-        btnSVG[i].style.display = \"none\";\r\n-    }\r\n-    svgIndex ++;\r\n-        if(svgIndex > slides.length){\r\n-            svgIndex = 1;\r\n-        }\r\n-        console.log(svgIndex)\r\n-        btnSVG[svgIndex-1].style.display = \"block\";\r\n }\r\n \r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1638120465981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,15 +43,23 @@\n \r\n \r\n //theme\r\n btn_theme.onclick = (e)=>{\r\n-    let svgIndex = 0;\r\n     theme.classList.toggle('open')\r\n     for(let i = 0;i<btnButton.length;i++){\r\n         btnButton[i].classList.toggle('active');\r\n     }\r\n }\r\n-\r\n+function handlechangSVG(){\r\n+    for(let i = 0;i<btnSVG.length;i++){\r\n+        btnSVG[i].style.display = \"none\";\r\n+    }\r\n+    svgIndex ++;\r\n+        if(svgIndex > btnSVG.length){\r\n+            svgIndex = 1;\r\n+        }\r\n+        btnSVG[svgIndex-1].style.display = \"block\";\r\n+}\r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n     sidebars.classList.add('open');\r\n }\r\n"
+                },
+                {
+                    "date": 1638120519149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,17 +40,48 @@\n     let widthparallaxs = getoffsetwidthWparallaxs();\r\n     let widthwrappara =  getoffsetwidthparallaxs();\r\n     let minlengpara = Math.round(widthparallaxs/widthwrappara);\r\n \r\n+ \r\n+ // START   \r\n+    function start(){\r\n+       showSlides();\r\n+       setInterval(showSlides, 5000); \r\n+       setInterval(function(){\r\n+           handleChangslide(1);\r\n+       }, 5000); \r\n+       handleSlidedot();\r\n+       setInterval(function(){\r\n+        if(settimeslide >= (parallaxs_leng / minlengpara)){\r\n+            settimeslide = 0;\r\n+        }\r\n+        handleSlidedots(settimeslide)\r\n+        settimeslide++;\r\n+        \r\n+    }, 5000); \r\n \r\n-//theme\r\n+       setInterval(function(){\r\n+         if(indextime >= 3){\r\n+            indextime = 0;\r\n+        }\r\n+            document.querySelector('.dot2.active').classList.remove('active')\r\n+            dotList[indextime].classList.add('active');\r\n+            indextime++;\r\n+            \r\n+    }, 5000); \r\n+    }\r\n+\r\n+\r\n+\r\n+    //theme\r\n btn_theme.onclick = (e)=>{\r\n     theme.classList.toggle('open')\r\n     for(let i = 0;i<btnButton.length;i++){\r\n         btnButton[i].classList.toggle('active');\r\n     }\r\n }\r\n function handlechangSVG(){\r\n+    let svgIndex = 0;\r\n     for(let i = 0;i<btnSVG.length;i++){\r\n         btnSVG[i].style.display = \"none\";\r\n     }\r\n     svgIndex ++;\r\n@@ -106,37 +137,8 @@\n             Modal.classList.remove('open');\r\n             ModalVideo.src = ModalVideo.src ;\r\n         }\r\n     }\r\n- \r\n- // START   \r\n-    function start(){\r\n-       showSlides();\r\n-       setInterval(showSlides, 5000); \r\n-       setInterval(function(){\r\n-           handleChangslide(1);\r\n-       }, 5000); \r\n-       handleSlidedot();\r\n-       setInterval(function(){\r\n-        if(settimeslide >= (parallaxs_leng / minlengpara)){\r\n-            settimeslide = 0;\r\n-        }\r\n-        handleSlidedots(settimeslide)\r\n-        settimeslide++;\r\n-        \r\n-    }, 5000); \r\n-\r\n-       setInterval(function(){\r\n-         if(indextime >= 3){\r\n-            indextime = 0;\r\n-        }\r\n-            document.querySelector('.dot2.active').classList.remove('active')\r\n-            dotList[indextime].classList.add('active');\r\n-            indextime++;\r\n-            \r\n-    }, 5000); \r\n-    }\r\n-\r\n     // Lấy width của slide \r\n     function getoffsetwidth(){\r\n         let width = package_item[0].offsetWidth;\r\n         return width;\r\n"
+                },
+                {
+                    "date": 1638120538789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,8 +67,10 @@\n             dotList[indextime].classList.add('active');\r\n             indextime++;\r\n             \r\n     }, 5000); \r\n+\r\n+    handlechangSVG();\r\n     }\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1638120656516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,8 +79,9 @@\n     theme.classList.toggle('open')\r\n     for(let i = 0;i<btnButton.length;i++){\r\n         btnButton[i].classList.toggle('active');\r\n     }\r\n+    handlechangSVG();\r\n }\r\n function handlechangSVG(){\r\n     let svgIndex = 0;\r\n     for(let i = 0;i<btnSVG.length;i++){\r\n"
+                },
+                {
+                    "date": 1638121012617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n             indextime++;\r\n             \r\n     }, 5000); \r\n \r\n-    handlechangSVG();\r\n+    handlechangSVG(0);\r\n     }\r\n \r\n \r\n \r\n@@ -81,10 +81,10 @@\n         btnButton[i].classList.toggle('active');\r\n     }\r\n     handlechangSVG();\r\n }\r\n-function handlechangSVG(){\r\n-    let svgIndex = 0;\r\n+function handlechangSVG(index){\r\n+    let svgIndex = index;\r\n     for(let i = 0;i<btnSVG.length;i++){\r\n         btnSVG[i].style.display = \"none\";\r\n     }\r\n     svgIndex ++;\r\n"
+                },
+                {
+                    "date": 1638121036947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n     theme.classList.toggle('open')\r\n     for(let i = 0;i<btnButton.length;i++){\r\n         btnButton[i].classList.toggle('active');\r\n     }\r\n-    handlechangSVG();\r\n+    handlechangSVG(1);\r\n }\r\n function handlechangSVG(index){\r\n     let svgIndex = index;\r\n     for(let i = 0;i<btnSVG.length;i++){\r\n"
+                },
+                {
+                    "date": 1638121182633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n             indextime++;\r\n             \r\n     }, 5000); \r\n \r\n-    handlechangSVG(0);\r\n+    handlechangSVG();\r\n     }\r\n \r\n \r\n \r\n@@ -81,10 +81,10 @@\n         btnButton[i].classList.toggle('active');\r\n     }\r\n     handlechangSVG(1);\r\n }\r\n-function handlechangSVG(index){\r\n-    let svgIndex = index;\r\n+function handlechangSVG(){\r\n+    let svgIndex = 0;\r\n     for(let i = 0;i<btnSVG.length;i++){\r\n         btnSVG[i].style.display = \"none\";\r\n     }\r\n     svgIndex ++;\r\n"
+                },
+                {
+                    "date": 1638121229492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,8 +91,9 @@\n         if(svgIndex > btnSVG.length){\r\n             svgIndex = 1;\r\n         }\r\n         btnSVG[svgIndex-1].style.display = \"block\";\r\n+        setTimeout(1000)\r\n }\r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n     sidebars.classList.add('open');\r\n"
+                },
+                {
+                    "date": 1638121237666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,9 +91,9 @@\n         if(svgIndex > btnSVG.length){\r\n             svgIndex = 1;\r\n         }\r\n         btnSVG[svgIndex-1].style.display = \"block\";\r\n-        setTimeout(1000)\r\n+        setTimeout(100)\r\n }\r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n     sidebars.classList.add('open');\r\n"
+                },
+                {
+                    "date": 1638121266656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,9 +91,9 @@\n         if(svgIndex > btnSVG.length){\r\n             svgIndex = 1;\r\n         }\r\n         btnSVG[svgIndex-1].style.display = \"block\";\r\n-        setTimeout(100)\r\n+        setTimeout(handlechangSVG, timeout);\r\n }\r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n     sidebars.classList.add('open');\r\n"
+                },
+                {
+                    "date": 1638121473400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,9 +82,9 @@\n     }\r\n     handlechangSVG(1);\r\n }\r\n function handlechangSVG(){\r\n-    let svgIndex = 0;\r\n+    let svgIndex = 1;\r\n     for(let i = 0;i<btnSVG.length;i++){\r\n         btnSVG[i].style.display = \"none\";\r\n     }\r\n     svgIndex ++;\r\n"
+                },
+                {
+                    "date": 1638121600448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,18 +82,18 @@\n     }\r\n     handlechangSVG(1);\r\n }\r\n function handlechangSVG(){\r\n-    let svgIndex = 1;\r\n+    let svgIndex = 0;\r\n     for(let i = 0;i<btnSVG.length;i++){\r\n         btnSVG[i].style.display = \"none\";\r\n     }\r\n     svgIndex ++;\r\n         if(svgIndex > btnSVG.length){\r\n             svgIndex = 1;\r\n         }\r\n         btnSVG[svgIndex-1].style.display = \"block\";\r\n-        setTimeout(handlechangSVG, timeout);\r\n+       \r\n }\r\n barOpen.onclick = (e)=>{\r\n     e.preventDefault();\r\n     sidebars.classList.add('open');\r\n"
+                },
+                {
+                    "date": 1638121618017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n     theme.classList.toggle('open')\r\n     for(let i = 0;i<btnButton.length;i++){\r\n         btnButton[i].classList.toggle('active');\r\n     }\r\n-    handlechangSVG(1);\r\n+    handlechangSVG();\r\n }\r\n function handlechangSVG(){\r\n     let svgIndex = 0;\r\n     for(let i = 0;i<btnSVG.length;i++){\r\n"
+                },
+                {
+                    "date": 1638121639637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,9 @@\n     let width = getoffsetwidth();\r\n     let widthparallaxs = getoffsetwidthWparallaxs();\r\n     let widthwrappara =  getoffsetwidthparallaxs();\r\n     let minlengpara = Math.round(widthparallaxs/widthwrappara);\r\n+    let svgIndex = 0;\r\n \r\n  \r\n  // START   \r\n     function start(){\r\n@@ -82,9 +83,9 @@\n     }\r\n     handlechangSVG();\r\n }\r\n function handlechangSVG(){\r\n-    let svgIndex = 0;\r\n+    \r\n     for(let i = 0;i<btnSVG.length;i++){\r\n         btnSVG[i].style.display = \"none\";\r\n     }\r\n     svgIndex ++;\r\n"
+                },
+                {
+                    "date": 1638122758987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,8 @@\n     let widthparallaxs = getoffsetwidthWparallaxs();\r\n     let widthwrappara =  getoffsetwidthparallaxs();\r\n     let minlengpara = Math.round(widthparallaxs/widthwrappara);\r\n     let svgIndex = 0;\r\n-\r\n  \r\n  // START   \r\n     function start(){\r\n        showSlides();\r\n@@ -83,9 +82,8 @@\n     }\r\n     handlechangSVG();\r\n }\r\n function handlechangSVG(){\r\n-    \r\n     for(let i = 0;i<btnSVG.length;i++){\r\n         btnSVG[i].style.display = \"none\";\r\n     }\r\n     svgIndex ++;\r\n"
+                },
+                {
+                    "date": 1638125095184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n     const btn_theme = document.querySelector('.slider-btn.theme');\r\n     const btnButton= document.querySelectorAll('.slider-btn');\r\n     const btnSVG= document.querySelectorAll('.slider-btn.theme svg');\r\n     const theme = document.querySelector('.theme');\r\n+    const themeButtonWrap = document.querySelector('.theme-button-wrap');\r\n     let temp = 0; // bien cua slider bottom\r\n     let positionX = 0; \r\n     let index = 0;\r\n     let settimeslide = 0;\r\n"
+                },
+                {
+                    "date": 1638125186677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,8 +82,19 @@\n         btnButton[i].classList.toggle('active');\r\n     }\r\n     handlechangSVG();\r\n }\r\n+\r\n+themeButtonWrap.onclick = (e)=>{\r\n+    if(this){\r\n+        theme.classList.toggle('open')\r\n+    for(let i = 0;i<btnButton.length;i++){\r\n+        btnButton[i].classList.toggle('active');\r\n+    }\r\n+    handlechangSVG();\r\n+    }\r\n+}\r\n+\r\n function handlechangSVG(){\r\n     for(let i = 0;i<btnSVG.length;i++){\r\n         btnSVG[i].style.display = \"none\";\r\n     }\r\n"
+                },
+                {
+                    "date": 1638125199044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n     handlechangSVG();\r\n }\r\n \r\n themeButtonWrap.onclick = (e)=>{\r\n-    if(this){\r\n+    if(e.target == this){\r\n         theme.classList.toggle('open')\r\n     for(let i = 0;i<btnButton.length;i++){\r\n         btnButton[i].classList.toggle('active');\r\n     }\r\n"
+                },
+                {
+                    "date": 1638125214046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n     handlechangSVG();\r\n }\r\n \r\n themeButtonWrap.onclick = (e)=>{\r\n-    if(e.target == this){\r\n+    if(e.target == e.currentTarget){\r\n         theme.classList.toggle('open')\r\n     for(let i = 0;i<btnButton.length;i++){\r\n         btnButton[i].classList.toggle('active');\r\n     }\r\n"
+                },
+                {
+                    "date": 1638125343852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,23 +76,23 @@\n \r\n \r\n     //theme\r\n btn_theme.onclick = (e)=>{\r\n-    theme.classList.toggle('open')\r\n-    for(let i = 0;i<btnButton.length;i++){\r\n-        btnButton[i].classList.toggle('active');\r\n-    }\r\n-    handlechangSVG();\r\n+        SVGonclick();\r\n }\r\n \r\n themeButtonWrap.onclick = (e)=>{\r\n     if(e.target == e.currentTarget){\r\n-        theme.classList.toggle('open')\r\n+        SVGonclick();\r\n+    }\r\n+}\r\n+\r\n+function SVGonclick(){\r\n+    theme.classList.toggle('open')\r\n     for(let i = 0;i<btnButton.length;i++){\r\n         btnButton[i].classList.toggle('active');\r\n     }\r\n     handlechangSVG();\r\n-    }\r\n }\r\n \r\n function handlechangSVG(){\r\n     for(let i = 0;i<btnSVG.length;i++){\r\n"
+                },
+                {
+                    "date": 1638125964903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,8 @@\n     const btn_theme = document.querySelector('.slider-btn.theme');\r\n     const btnButton= document.querySelectorAll('.slider-btn');\r\n     const btnSVG= document.querySelectorAll('.slider-btn.theme svg');\r\n     const theme = document.querySelector('.theme');\r\n-    const themeButtonWrap = document.querySelector('.theme-button-wrap');\r\n     let temp = 0; // bien cua slider bottom\r\n     let positionX = 0; \r\n     let index = 0;\r\n     let settimeslide = 0;\r\n@@ -79,13 +78,8 @@\n btn_theme.onclick = (e)=>{\r\n         SVGonclick();\r\n }\r\n \r\n-themeButtonWrap.onclick = (e)=>{\r\n-    if(e.target == e.currentTarget){\r\n-        SVGonclick();\r\n-    }\r\n-}\r\n \r\n function SVGonclick(){\r\n     theme.classList.toggle('open')\r\n     for(let i = 0;i<btnButton.length;i++){\r\n"
                 }
             ],
             "date": 1637993082837,

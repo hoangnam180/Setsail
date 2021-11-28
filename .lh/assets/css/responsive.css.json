@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 22,
+            "activePatchIndex": 26,
             "patches": [
                 {
                     "date": 1637997611722,
@@ -96,6 +96,22 @@
                 {
                     "date": 1638032507197,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,8 +102,13 @@\n \r\n /* mobile table */\r\n @media only screen and (max-width : 1023px){\r\n \r\n+    iframe{\r\n+        border: none;\r\n+        width: 75rem;\r\n+        height: 42.2rem;\r\n+    }\r\n     .top-header{\r\n         display: none;\r\n     }\r\n     .bottom-header-logo{\r\n@@ -373,5 +378,11 @@\n     .dot2{\r\n         display: none;\r\n     }\r\n \r\n+    iframe{\r\n+        border: none;\r\n+        width: 49rem;\r\n+        height: 42.2rem;\r\n+    }\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638073590626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,23 @@\n \r\n @media only screen and (min-width: 1000px){\r\n     \r\n+    .sidebars{\r\n+        position: fixed;\r\n+        inset: 0 0 0 0;\r\n+        background-color: #000;\r\n+        z-index: 2000;\r\n+    }\r\n+    .sidebar-content{\r\n+        background-color: #fff;\r\n+        width: 460px;\r\n+        max-width: 100%;\r\n+        position: absolute;\r\n+        right: 0;\r\n+        bottom: 0;\r\n+        top: 0;\r\n+        padding: 10rem 5rem 4rem;\r\n+    }\r\n     .bottom-header-item:hover .bottom-header-item-link.underline::after{\r\n         width: 100%;\r\n         background-color: var(--primary-color);\r\n     }\r\n"
+                },
+                {
+                    "date": 1638075721882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,8 @@\n \r\n @media only screen and (min-width: 1000px){\r\n     \r\n-    .sidebars{\r\n-        position: fixed;\r\n-        inset: 0 0 0 0;\r\n-        background-color: #000;\r\n-        z-index: 2000;\r\n-    }\r\n-    .sidebar-content{\r\n-        background-color: #fff;\r\n-        width: 460px;\r\n-        max-width: 100%;\r\n-        position: absolute;\r\n-        right: 0;\r\n-        bottom: 0;\r\n-        top: 0;\r\n-        padding: 10rem 5rem 4rem;\r\n-    }\r\n+    \r\n     .bottom-header-item:hover .bottom-header-item-link.underline::after{\r\n         width: 100%;\r\n         background-color: var(--primary-color);\r\n     }\r\n"
+                },
+                {
+                    "date": 1638075746246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,6 @@\n \r\n @media only screen and (min-width: 1000px){\r\n-    \r\n-    \r\n     .bottom-header-item:hover .bottom-header-item-link.underline::after{\r\n         width: 100%;\r\n         background-color: var(--primary-color);\r\n     }\r\n"
+                },
+                {
+                    "date": 1638125918395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -209,9 +209,9 @@\n         left: 0px;\r\n         background-color: #2121212e;\r\n     }\r\n     .slider-btn{\r\n-        transform: translateX(77px);\r\n+        transform: translateX(83px);\r\n     }\r\n     .slider-arrow{\r\n         display: none;\r\n     }\r\n"
                 }
             ],
             "date": 1637997611722,

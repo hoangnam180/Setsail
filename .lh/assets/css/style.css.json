@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 44,
             "patches": [
                 {
                     "date": 1638002901348,
@@ -28,6 +28,162 @@
                 {
                     "date": 1638003932221,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n .fluit-video-image button{\r\n     display: block;\r\n     width: 100%;\r\n     border: none;\r\n+    cursor: pointer;\r\n }\r\n .top-header-left{\r\n     \r\n }\r\n"
+                },
+                {
+                    "date": 1638107622398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -436,14 +436,14 @@\n }\r\n .slider-btn i{\r\n     font-size: 1.5rem;\r\n }\r\n-.slider-btn.sidebar{\r\n+.slider-btn.theme{\r\n     background-color: #EF2853;\r\n     top: 26.5%;\r\n     color:var(--white-color);\r\n }\r\n-.slider-btn.sidebar i{\r\n+.slider-btn.theme i{\r\n     transform: rotate(160deg);\r\n     font-size: 1.8rem;\r\n     font-weight: 700;\r\n }\r\n"
+                },
+                {
+                    "date": 1638108627420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -441,12 +441,10 @@\n     background-color: #EF2853;\r\n     top: 26.5%;\r\n     color:var(--white-color);\r\n }\r\n-.slider-btn.theme i{\r\n-    transform: rotate(160deg);\r\n-    font-size: 1.8rem;\r\n-    font-weight: 700;\r\n+.slider-btn.theme svg{\r\n+    /* font-size: 1.8rem; */\r\n }\r\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n     background-color: var(--white-color);\r\n"
+                },
+                {
+                    "date": 1638108686414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -437,9 +437,9 @@\n .slider-btn i{\r\n     font-size: 1.5rem;\r\n }\r\n .slider-btn.theme{\r\n-    background-color: #EF2853;\r\n+    /* background-color: #EF2853; */\r\n     top: 26.5%;\r\n     color:var(--white-color);\r\n }\r\n .slider-btn.theme svg{\r\n"
+                },
+                {
+                    "date": 1638108857841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -437,11 +437,10 @@\n .slider-btn i{\r\n     font-size: 1.5rem;\r\n }\r\n .slider-btn.theme{\r\n-    /* background-color: #EF2853; */\r\n+    background-color: #EF2853;\r\n     top: 26.5%;\r\n-    color:var(--white-color);\r\n }\r\n .slider-btn.theme svg{\r\n     /* font-size: 1.8rem; */\r\n }\r\n"
+                },
+                {
+                    "date": 1638108868197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -441,9 +441,9 @@\n     background-color: #EF2853;\r\n     top: 26.5%;\r\n }\r\n .slider-btn.theme svg{\r\n-    /* font-size: 1.8rem; */\r\n+    height: 20px;\r\n }\r\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n     background-color: var(--white-color);\r\n"
+                },
+                {
+                    "date": 1638108880928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -441,9 +441,9 @@\n     background-color: #EF2853;\r\n     top: 26.5%;\r\n }\r\n .slider-btn.theme svg{\r\n-    height: 20px;\r\n+    font-size: ;: 20px;\r\n }\r\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n     background-color: var(--white-color);\r\n"
+                },
+                {
+                    "date": 1638108892906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -441,9 +441,9 @@\n     background-color: #EF2853;\r\n     top: 26.5%;\r\n }\r\n .slider-btn.theme svg{\r\n-    font-size: ;: 20px;\r\n+   height: 20px;\r\n }\r\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n     background-color: var(--white-color);\r\n"
+                },
+                {
+                    "date": 1638108916074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -441,9 +441,10 @@\n     background-color: #EF2853;\r\n     top: 26.5%;\r\n }\r\n .slider-btn.theme svg{\r\n-   height: 20px;\r\n+   /* height: 20px; */\r\n+   max-height: 100%;\r\n }\r\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n     background-color: var(--white-color);\r\n"
+                },
+                {
+                    "date": 1638108943094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -423,9 +423,9 @@\n     position: absolute;\r\n     right: 0;\r\n     width: 115px;\r\n     font-size: 1.1rem;\r\n-    padding: 1.3rem 1rem;\r\n+  \r\n     transform: translateX(3px);\r\n     display: flex;\r\n     align-items: center;\r\n     position: fixed;\r\n@@ -446,8 +446,9 @@\n    max-height: 100%;\r\n }\r\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n+    padding: 1.3rem 1rem;\r\n     background-color: var(--white-color);\r\n     \r\n }\r\n .slider-btn.purchase i{\r\n"
+                },
+                {
+                    "date": 1638108949812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -441,10 +441,10 @@\n     background-color: #EF2853;\r\n     top: 26.5%;\r\n }\r\n .slider-btn.theme svg{\r\n-   /* height: 20px; */\r\n-   max-height: 100%;\r\n+   height: 20px;\r\n+   /* max-height: 100%; */\r\n }\r\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n     padding: 1.3rem 1rem;\r\n"
+                },
+                {
+                    "date": 1638108970831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -439,12 +439,12 @@\n }\r\n .slider-btn.theme{\r\n     background-color: #EF2853;\r\n     top: 26.5%;\r\n+    padding: 1rem 1rem;\r\n }\r\n .slider-btn.theme svg{\r\n-   height: 20px;\r\n-   /* max-height: 100%; */\r\n+   height: 30px;\r\n }\r\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n     padding: 1.3rem 1rem;\r\n"
+                },
+                {
+                    "date": 1638108977408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -439,9 +439,9 @@\n }\r\n .slider-btn.theme{\r\n     background-color: #EF2853;\r\n     top: 26.5%;\r\n-    padding: 1rem 1rem;\r\n+    padding: 0.5rem 1rem;\r\n }\r\n .slider-btn.theme svg{\r\n    height: 30px;\r\n }\r\n"
+                },
+                {
+                    "date": 1638109005851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -439,12 +439,12 @@\n }\r\n .slider-btn.theme{\r\n     background-color: #EF2853;\r\n     top: 26.5%;\r\n-    padding: 0.5rem 1rem;\r\n+    padding: 0.7rem 1rem;\r\n }\r\n .slider-btn.theme svg{\r\n-   height: 30px;\r\n+   height: 29px;\r\n }\r\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n     padding: 1.3rem 1rem;\r\n"
+                },
+                {
+                    "date": 1638109073959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -440,8 +440,9 @@\n .slider-btn.theme{\r\n     background-color: #EF2853;\r\n     top: 26.5%;\r\n     padding: 0.7rem 1rem;\r\n+    color: var(--white-color);\r\n }\r\n .slider-btn.theme svg{\r\n    height: 29px;\r\n }\r\n"
+                },
+                {
+                    "date": 1638109093893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -442,8 +442,11 @@\n     top: 26.5%;\r\n     padding: 0.7rem 1rem;\r\n     color: var(--white-color);\r\n }\r\n+.slider-btn.theme p {\r\n+   margin-left: 3px;\r\n+}\r\n .slider-btn.theme svg{\r\n    height: 29px;\r\n }\r\n .slider-btn.purchase{\r\n"
+                },
+                {
+                    "date": 1638109099958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -443,9 +443,9 @@\n     padding: 0.7rem 1rem;\r\n     color: var(--white-color);\r\n }\r\n .slider-btn.theme p {\r\n-   margin-left: 3px;\r\n+   margin-left: 5px;\r\n }\r\n .slider-btn.theme svg{\r\n    height: 29px;\r\n }\r\n"
+                },
+                {
+                    "date": 1638109118760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -450,9 +450,9 @@\n    height: 29px;\r\n }\r\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n-    padding: 1.3rem 1rem;\r\n+    padding: 1.3rem 0.5rem;\r\n     background-color: var(--white-color);\r\n     \r\n }\r\n .slider-btn.purchase i{\r\n"
+                },
+                {
+                    "date": 1638109126054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -450,9 +450,9 @@\n    height: 29px;\r\n }\r\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n-    padding: 1.3rem 0.5rem;\r\n+    padding: 1.3rem 0;\r\n     background-color: var(--white-color);\r\n     \r\n }\r\n .slider-btn.purchase i{\r\n"
+                },
+                {
+                    "date": 1638109139601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -450,9 +450,9 @@\n    height: 29px;\r\n }\r\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n-    padding: 1.3rem 0;\r\n+    padding: 1.3rem 1rem;\r\n     background-color: var(--white-color);\r\n     \r\n }\r\n .slider-btn.purchase i{\r\n"
+                },
+                {
+                    "date": 1638109158402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -439,9 +439,9 @@\n }\r\n .slider-btn.theme{\r\n     background-color: #EF2853;\r\n     top: 26.5%;\r\n-    padding: 0.7rem 1rem;\r\n+    padding: 0.7rem 0.7rem;\r\n     color: var(--white-color);\r\n }\r\n .slider-btn.theme p {\r\n    margin-left: 5px;\r\n"
+                },
+                {
+                    "date": 1638109164194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -439,9 +439,9 @@\n }\r\n .slider-btn.theme{\r\n     background-color: #EF2853;\r\n     top: 26.5%;\r\n-    padding: 0.7rem 0.7rem;\r\n+    padding: 0.7rem 0rem;\r\n     color: var(--white-color);\r\n }\r\n .slider-btn.theme p {\r\n    margin-left: 5px;\r\n"
+                },
+                {
+                    "date": 1638109171356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -439,9 +439,9 @@\n }\r\n .slider-btn.theme{\r\n     background-color: #EF2853;\r\n     top: 26.5%;\r\n-    padding: 0.7rem 0rem;\r\n+    padding: 0.7rem 0.5rem;\r\n     color: var(--white-color);\r\n }\r\n .slider-btn.theme p {\r\n    margin-left: 5px;\r\n"
+                },
+                {
+                    "date": 1638110560263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -423,9 +423,8 @@\n     position: absolute;\r\n     right: 0;\r\n     width: 115px;\r\n     font-size: 1.1rem;\r\n-  \r\n     transform: translateX(3px);\r\n     display: flex;\r\n     align-items: center;\r\n     position: fixed;\r\n"
+                },
+                {
+                    "date": 1638110589537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -419,9 +419,8 @@\n }\r\n \r\n .slider-btn{\r\n     font-family: 'Heebo', sans-serif;\r\n-    position: absolute;\r\n     right: 0;\r\n     width: 115px;\r\n     font-size: 1.1rem;\r\n     transform: translateX(3px);\r\n"
+                },
+                {
+                    "date": 1638110626565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -426,9 +426,9 @@\n     transform: translateX(3px);\r\n     display: flex;\r\n     align-items: center;\r\n     position: fixed;\r\n-    z-index: 1000;\r\n+    /* z-index: 1000; */\r\n }\r\n .slider-btn span{\r\n     margin-left: 1rem;\r\n }\r\n"
+                },
+                {
+                    "date": 1638114205722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -425,9 +425,9 @@\n     font-size: 1.1rem;\r\n     transform: translateX(3px);\r\n     display: flex;\r\n     align-items: center;\r\n-    position: fixed;\r\n+    /* position: fixed; */\r\n     /* z-index: 1000; */\r\n }\r\n .slider-btn span{\r\n     margin-left: 1rem;\r\n"
+                },
+                {
+                    "date": 1638114213190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -425,9 +425,9 @@\n     font-size: 1.1rem;\r\n     transform: translateX(3px);\r\n     display: flex;\r\n     align-items: center;\r\n-    /* position: fixed; */\r\n+    position: fixed;\r\n     /* z-index: 1000; */\r\n }\r\n .slider-btn span{\r\n     margin-left: 1rem;\r\n@@ -444,9 +444,9 @@\n .slider-btn.theme p {\r\n    margin-left: 5px;\r\n }\r\n .slider-btn.theme svg{\r\n-   height: 29px;\r\n+   /* height: 29px; */\r\n }\r\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n     padding: 1.3rem 1rem;\r\n"
+                },
+                {
+                    "date": 1638114286677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -425,10 +425,10 @@\n     font-size: 1.1rem;\r\n     transform: translateX(3px);\r\n     display: flex;\r\n     align-items: center;\r\n-    position: fixed;\r\n-    /* z-index: 1000; */\r\n+    position: absolute;\r\n+    z-index: 1000;\r\n }\r\n .slider-btn span{\r\n     margin-left: 1rem;\r\n }\r\n@@ -444,9 +444,9 @@\n .slider-btn.theme p {\r\n    margin-left: 5px;\r\n }\r\n .slider-btn.theme svg{\r\n-   /* height: 29px; */\r\n+   height: 29px;\r\n }\r\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n     padding: 1.3rem 1rem;\r\n"
+                },
+                {
+                    "date": 1638114296464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -419,9 +419,9 @@\n }\r\n \r\n .slider-btn{\r\n     font-family: 'Heebo', sans-serif;\r\n-    right: 0;\r\n+    left: 0;\r\n     width: 115px;\r\n     font-size: 1.1rem;\r\n     transform: translateX(3px);\r\n     display: flex;\r\n"
+                },
+                {
+                    "date": 1638114384482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -450,9 +450,9 @@\n .slider-btn.purchase{\r\n     top: 32.3%;\r\n     padding: 1.3rem 1rem;\r\n     background-color: var(--white-color);\r\n-    \r\n+    transform: translateX(-38px);\r\n }\r\n .slider-btn.purchase i{\r\n    color:#EF2853 ;\r\n     \r\n"
+                },
+                {
+                    "date": 1638114414061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -451,8 +451,9 @@\n     top: 32.3%;\r\n     padding: 1.3rem 1rem;\r\n     background-color: var(--white-color);\r\n     transform: translateX(-38px);\r\n+    overflow: hidden;\r\n }\r\n .slider-btn.purchase i{\r\n    color:#EF2853 ;\r\n     \r\n"
+                },
+                {
+                    "date": 1638114431208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -452,8 +452,9 @@\n     padding: 1.3rem 1rem;\r\n     background-color: var(--white-color);\r\n     transform: translateX(-38px);\r\n     overflow: hidden;\r\n+    z-index: -1;\r\n }\r\n .slider-btn.purchase i{\r\n    color:#EF2853 ;\r\n     \r\n"
+                },
+                {
+                    "date": 1638114436480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -452,9 +452,9 @@\n     padding: 1.3rem 1rem;\r\n     background-color: var(--white-color);\r\n     transform: translateX(-38px);\r\n     overflow: hidden;\r\n-    z-index: -1;\r\n+    z-index: -100;\r\n }\r\n .slider-btn.purchase i{\r\n    color:#EF2853 ;\r\n     \r\n"
+                },
+                {
+                    "date": 1638114442743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -426,9 +426,8 @@\n     transform: translateX(3px);\r\n     display: flex;\r\n     align-items: center;\r\n     position: absolute;\r\n-    z-index: 1000;\r\n }\r\n .slider-btn span{\r\n     margin-left: 1rem;\r\n }\r\n"
+                },
+                {
+                    "date": 1638114448716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -451,9 +451,8 @@\n     padding: 1.3rem 1rem;\r\n     background-color: var(--white-color);\r\n     transform: translateX(-38px);\r\n     overflow: hidden;\r\n-    z-index: -100;\r\n }\r\n .slider-btn.purchase i{\r\n    color:#EF2853 ;\r\n     \r\n"
+                },
+                {
+                    "date": 1638114456336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -426,8 +426,9 @@\n     transform: translateX(3px);\r\n     display: flex;\r\n     align-items: center;\r\n     position: absolute;\r\n+    z-index: -1;\r\n }\r\n .slider-btn span{\r\n     margin-left: 1rem;\r\n }\r\n"
+                },
+                {
+                    "date": 1638114749134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -417,48 +417,9 @@\n .slider-arrow.arrow-left{\r\n     left: 4rem;\r\n }\r\n \r\n-.slider-btn{\r\n-    font-family: 'Heebo', sans-serif;\r\n-    left: 0;\r\n-    width: 115px;\r\n-    font-size: 1.1rem;\r\n-    transform: translateX(3px);\r\n-    display: flex;\r\n-    align-items: center;\r\n-    position: absolute;\r\n-    z-index: -1;\r\n-}\r\n-.slider-btn span{\r\n-    margin-left: 1rem;\r\n-}\r\n-.slider-btn i{\r\n-    font-size: 1.5rem;\r\n-}\r\n-.slider-btn.theme{\r\n-    background-color: #EF2853;\r\n-    top: 26.5%;\r\n-    padding: 0.7rem 0.5rem;\r\n-    color: var(--white-color);\r\n-}\r\n-.slider-btn.theme p {\r\n-   margin-left: 5px;\r\n-}\r\n-.slider-btn.theme svg{\r\n-   height: 29px;\r\n-}\r\n-.slider-btn.purchase{\r\n-    top: 32.3%;\r\n-    padding: 1.3rem 1rem;\r\n-    background-color: var(--white-color);\r\n-    transform: translateX(-38px);\r\n-    overflow: hidden;\r\n-}\r\n-.slider-btn.purchase i{\r\n-   color:#EF2853 ;\r\n-    \r\n-}\r\n+\r\n .fluit.x2.resort{\r\n     padding-top: 12.5rem;\r\n }\r\n .slider-btn.purchase a{\r\n"
+                },
+                {
+                    "date": 1638123324852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -417,9 +417,49 @@\n .slider-arrow.arrow-left{\r\n     left: 4rem;\r\n }\r\n \r\n+.slider-btn{\r\n+    font-family: 'Heebo', sans-serif;\r\n+    left: 0;\r\n+    width: 115px;\r\n+    font-size: 1.1rem;\r\n+    transform: translateX(3px);\r\n+    display: flex;\r\n+    align-items: center;\r\n+    position: absolute;\r\n+    z-index: 1000;\r\n+}\r\n+.slider-btn span{\r\n+    margin-left: 1rem;\r\n+}\r\n+.slider-btn i{\r\n+    font-size: 1.5rem;\r\n+}\r\n+.slider-btn.theme{\r\n+    background-color: #EF2853;\r\n+    top: 26.5%;\r\n+    padding: 0.7rem 0.5rem;\r\n+    color: var(--white-color);\r\n+}\r\n+.slider-btn.theme p {\r\n+   margin-left: 5px;\r\n+}\r\n+.slider-btn.theme svg{\r\n+   height: 29px;\r\n+}\r\n+.slider-btn.purchase{\r\n+    top: 32.3%;\r\n+    padding: 1.3rem 1rem;\r\n+    background-color: var(--white-color);\r\n+    transform: translateX(-38px);\r\n+    overflow: hidden;\r\n \r\n+}\r\n+.slider-btn.purchase i{\r\n+   color:#EF2853 ;\r\n+    \r\n+}\r\n .fluit.x2.resort{\r\n     padding-top: 12.5rem;\r\n }\r\n .slider-btn.purchase a{\r\n"
+                },
+                {
+                    "date": 1638123368467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -417,49 +417,8 @@\n .slider-arrow.arrow-left{\r\n     left: 4rem;\r\n }\r\n \r\n-.slider-btn{\r\n-    font-family: 'Heebo', sans-serif;\r\n-    left: 0;\r\n-    width: 115px;\r\n-    font-size: 1.1rem;\r\n-    transform: translateX(3px);\r\n-    display: flex;\r\n-    align-items: center;\r\n-    position: absolute;\r\n-    z-index: 1000;\r\n-}\r\n-.slider-btn span{\r\n-    margin-left: 1rem;\r\n-}\r\n-.slider-btn i{\r\n-    font-size: 1.5rem;\r\n-}\r\n-.slider-btn.theme{\r\n-    background-color: #EF2853;\r\n-    top: 26.5%;\r\n-    padding: 0.7rem 0.5rem;\r\n-    color: var(--white-color);\r\n-}\r\n-.slider-btn.theme p {\r\n-   margin-left: 5px;\r\n-}\r\n-.slider-btn.theme svg{\r\n-   height: 29px;\r\n-}\r\n-.slider-btn.purchase{\r\n-    top: 32.3%;\r\n-    padding: 1.3rem 1rem;\r\n-    background-color: var(--white-color);\r\n-    transform: translateX(-38px);\r\n-    overflow: hidden;\r\n-\r\n-}\r\n-.slider-btn.purchase i{\r\n-   color:#EF2853 ;\r\n-    \r\n-}\r\n .fluit.x2.resort{\r\n     padding-top: 12.5rem;\r\n }\r\n .slider-btn.purchase a{\r\n"
                 }
             ],
             "date": 1638002901348,

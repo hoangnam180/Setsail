@@ -1,0 +1,123 @@
+.sidebars{
+    position: fixed;
+    inset: 0 0 0 0;
+    z-index: 1000;
+    display: none;
+}
+.sidebars.open{
+    display: block;
+
+}
+.sidebar-content{
+    background-color: #fff;
+    width: 460px;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    padding: 10rem 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-animation-name: fadeInout;
+    -webkit-animation-duration: .5s;
+    animation-name: fadeInout;
+    animation-duration: .5s;
+    
+}
+.sidebar-close{
+    position: absolute;
+    right: 2rem;
+    top: 3rem;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.sidebar-close i{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #999;
+}
+
+.sidebar-logo img ,.sidebar-text-img img,.sidebar-map img{
+    vertical-align: top;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+.sidebar-text-img{
+    margin-top: 1.5rem;
+}
+.sidebar-map{
+    margin-top: 5rem;
+}
+.sidebar-text{
+    margin-top: 4rem;
+    margin-bottom: 4.5rem;
+    text-align: center;
+    line-height: 1.6;
+}
+.sidebar-title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.sidebar-input{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+}
+.sidebar-input input{
+    padding: 9px 0 11px 21px;
+    border: none;
+    background-color: #eeeeeea6;
+    width: 100%;
+    height: 4.5rem;
+    border-radius: 2px;
+    outline: none;
+}
+.sidebar-input input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #999;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+.sidebar-search{
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 6rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    transition: background .25s linear;
+}
+
+.sidebar-search:hover,.sidebar-social span a:hover{
+    background-color: #33a4a7;
+}
+.sidebar-follow{
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.sidebar-social span{
+    margin-right: 5px;
+    display: inline-block;
+    border: 50%;
+}
+.sidebar-social span a{
+    color: #fff;
+    text-decoration: none;
+    border-radius: 100%;
+    padding: 1.6rem;
+    font-size: 1.4rem;
+    display: inline-block;
+    background-color: var(--primary-color);
+    transition: background .25s linear;
+}
