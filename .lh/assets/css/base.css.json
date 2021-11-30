@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 7,
             "patches": [
                 {
                     "date": 1638076931424,
@@ -28,6 +28,14 @@
                 {
                     "date": 1638079429832,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,15 +36,10 @@\n     -webkit-animation-duration: 1.5s;\r\n     animation-name: fade;\r\n     animation-duration: 1.5s;\r\n   }\r\n-.fadeInlea{\r\n-  -webkit-animation-name: fadeInlea;\r\n-    -webkit-animation-duration: .5s;\r\n-    animation-name: fadeInlea;\r\n-    animation-duration: .5s;\r\n-}\r\n \r\n+\r\n .trans{\r\n     -webkit-animation-name: trans;\r\n     -webkit-animation-duration: 1.2s;\r\n     animation-name: trans;\r\n"
+                },
+                {
+                    "date": 1638204379018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -173,8 +173,42 @@\n         transform: translateX(100%);\r\n         \r\n     }\r\n   }\r\n+  @keyframes Opacity {\r\n+    0% {\r\n+     \r\n+        opacity: 0;\r\n+        \r\n+        } \r\n+        75%{\r\n+          opacity: 0.7;\r\n+        }\r\n+   \r\n+    100% {\r\n+     \r\n+        opacity: 1;\r\n+     \r\n+        \r\n+    }\r\n+  }\r\n+  @-webkit-keyframes Opacity {\r\n+    0% {\r\n+     \r\n+      opacity: 0;\r\n+      \r\n+      } \r\n+      75%{\r\n+        opacity: 0.7;\r\n+      }\r\n+ \r\n+  100% {\r\n+   \r\n+      opacity: 1;\r\n+   \r\n+      \r\n+  }\r\n+}\r\n \r\n \r\n   @keyframes breath {\r\n     0%   { background-size:auto 100%; }\r\n"
+                },
+                {
+                    "date": 1638204458292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -179,11 +179,9 @@\n      \r\n         opacity: 0;\r\n         \r\n         } \r\n-        75%{\r\n-          opacity: 0.7;\r\n-        }\r\n+    \r\n    \r\n     100% {\r\n      \r\n         opacity: 1;\r\n@@ -196,11 +194,9 @@\n      \r\n       opacity: 0;\r\n       \r\n       } \r\n-      75%{\r\n-        opacity: 0.7;\r\n-      }\r\n+     \r\n  \r\n   100% {\r\n    \r\n       opacity: 1;\r\n"
                 }
             ],
             "date": 1638076931424,

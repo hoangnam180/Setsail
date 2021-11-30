@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./assets/css/modal.css">
     <link rel="stylesheet" href="./assets/css/sidebars.css">
     <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/validate.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <title>SetSail-Travel Agency Theme</title>
 </head>
@@ -418,9 +419,17 @@
                                 </ul> -->
                             </div>
                         </li>
-                        <li class="bottom-header-right-item">
+                        <li class="bottom-header-right-item search">
                             <a class="" href=""><i class="fas fa-search"></i></a>
                         </li>
+                        <div class="header-search">
+                            <div class="search-close">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <input type="text">
+                            <br>
+                            <button>FIND NOW</button>
+                        </div>
                         <li class="bottom-header-right-item js">
                            <a class="" href=""><i class="ti-align-right"></i></a>
                         </li>
@@ -1427,25 +1436,25 @@
                             <div class="row aligment-inner">
                                 <div class="col l-3 m-6 c-12 aligment-pd">
                                     <div class="aligment-quantily">
-                                        <h2>452</h2>
+                                        <h2>0</h2>
                                         <span>Tourists</span>
                                     </div>
                                 </div>
                                 <div class="col l-3 m-6 c-12 aligment-pd">
                                     <div class="aligment-quantily">
-                                        <h2>120</h2>
+                                        <h2>0</h2>
                                         <span>Years</span>
                                     </div>
                                 </div>
                                 <div class="col l-3 m-6 c-12 aligment-pd">
                                     <div class="aligment-quantily">
-                                        <h2>283</h2>
+                                        <h2>0</h2>
                                         <span>Cottages</span>
                                     </div>
                                 </div>
                                 <div class="col l-3 m-6 c-12 aligment-pd">
                                     <div class="aligment-quantily">
-                                        <h2>197</h2>
+                                        <h2>0</h2>
                                         <span>Restaurants</span>
                                     </div>
                                 </div>
@@ -1590,7 +1599,114 @@
                 </div>
             </div>
         </div>
-        <script src="./app.js"></script>
+        <div class="validate">
+            <div class="validate-content">
+
+                
+                <div class="validate-change">
+                    <div class="change-item">
+                        <a href="#">LOGIN</a>
+                    </div>
+                    <div class="change-item">
+                        <a href="#">REGISTER</a>
+                    </div>
+                </div>
+                <!-- login -->
+                <div class="login validation-form">
+                    <h4 class="login-title">
+                        Sign In Here
+                    </h4>
+                    <p class="login-des">
+                        Log into your account in just a few simple steps.
+                    </p>
+                    <div class="spacer"></div>
+                    <form action="" method="POST" class="form" id="form-2">
+                    <div class="form-group ">
+                        <input id="fullname" name="fullname" type="text" placeholder="User Name" class="form-control form-control2">
+                        <span class="form-message"></span>
+                        <div class="form-icon"><i class="fas fa-user"></i></div>
+                    </div>
+                       <div class="form-group">
+                        <input id="password" name="password" type="password" placeholder="Password" class="form-control form-control2">
+                        <span class="form-message"></span>
+                        <div class="form-icon"><i class="fas fa-lock"></i></div>
+                       </div>
+                        <div class="form-group form-group2">
+                            <input id="checkbox" name="Check" type="checkbox" class="form-control2 check">
+                            <label for="checkbox">Remember me</label>
+                          </div>
+                          <a class="forget" href="#">Lost Your password</a>
+                          <button class="form-submit">SIGN IN</button>
+                    </form>
+                    <p class="about-google">
+                        Sign in with Facebook or Google+ </p>
+                </div>
+
+                <!-- Register -->
+
+                <div class="register validation-form">
+                    <h4 class="login-title">
+                        Register Now!
+                    </h4>
+                    <p class="login-des">
+                        Join the SetSail community today & set up a free account.
+                    </p>
+                    <div class="spacer"></div>
+                    <form action="" method="POST" class="form" id="form-3">
+                    <div class="form-group ">
+                        <input id="fullname" name="fullname" type="text" placeholder="User Name" class="form-control form-control2">
+                        <span class="form-message"></span>
+                        <div class="form-icon"><i class="fas fa-user"></i></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input id="email" name="email" type="text" placeholder="Email" class="form-control form-control2">
+                        <span class="form-message"></span>
+                        <div class="form-icon"><i class="far fa-envelope"></i></div>
+                      </div>
+
+                       <div class="form-group">
+                        <input id="password" name="password" type="password" placeholder="Password" class="form-control form-control2">
+                        <span class="form-message"></span>
+                        <div class="form-icon"><i class="fas fa-lock"></i></div>
+                       </div>
+
+                       
+                       <div class="form-group">
+                        <input id="password_repeat" name="password_repeat" type="password" placeholder="Repeat Password" class="form-control form-control2">
+                        <span class="form-message"></span>
+                        <div class="form-icon"><i class="fas fa-lock"></i></div>
+                       </div>
+
+                          <button class="form-submit">register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="./js/app.js"></script>
+        <script src="./js/validation.js"></script>
+        <script>
+            //mong muốn 
+            validation({
+              form : '#form-2',
+              errorSelector : '.form-message',
+              rules : [
+                validation.isRequired('#fullname'),
+                validation.islength('#password',6)
+              ]
+            })
+
+            validation({
+              form : '#form-3',
+              errorSelector : '.form-message',
+              rules : [
+                validation.isRequired('#fullname'),
+                validation.isEmail('#email'),
+                validation.islength('#password',6),
+                validation.islength('#password_repeat',6)
+              ]
+            })
+          </script>
     </div>
 </body>
 </html>

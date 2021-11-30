@@ -9,6 +9,7 @@
 
 }
 .sidebar-content{
+    overflow: auto;
     background-color: #fff;
     width: 460px;
     max-width: 100%;

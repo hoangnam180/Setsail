@@ -1,0 +1,111 @@
+.validate{
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: rgba(240, 235, 234, 0.85);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    -webkit-animation-name: Opacity;
+    -webkit-animation-duration: .7s;
+    animation-name: Opacity;
+    animation-duration: .7s;
+   
+}
+.validate.open{
+    display: flex;
+}
+.validate-content{
+    width: 308px;
+    height: 540px;
+    background-color: var(--primary-color);
+}
+.validate-change{
+    display: flex;
+}
+.change-item{
+    width: 50%;
+    text-align: center;
+}
+.change-item a{
+    text-decoration: none;
+    padding: 1.7rem 0;
+    line-height: inherit;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #fff;
+    font-size: 13px;
+    width: 100%;
+}
+.change-item.active{
+    background-color: #3ABDC1;
+}
+.login,.register{
+    padding: 3rem;
+    color: var(--white-color);
+    -webkit-animation-name: Opacity;
+    -webkit-animation-duration: .4s;
+    animation-name: Opacity;
+    animation-duration: .4s;
+}
+
+.login-title{
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    margin-bottom: 5px;
+}
+.login-des{
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+.spacer{
+    margin : 2rem 0;
+}
+
+.form-group2{
+    margin-top: 1.8rem;
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 1.8rem;
+}
+.form-control2{
+    background-color: #6FDCDF;
+}
+.form-control2.check{
+    margin-right: 10px;
+    
+}
+
+
+.form-message{
+    color: red;
+    margin-top: 8px;
+    display: inline-block;
+    font-size: 1.3rem;
+}
+.forget{
+    display: block;
+    text-decoration: none;
+    color: #2690A9;
+    font-size: 1.4rem;
+}
+.register .form-submit{
+    margin-top: 0;
+}
+.form-submit{
+    width: 100%;
+    padding: 18px 0;
+    border: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.about-google{
+    text-align: center;
+}
