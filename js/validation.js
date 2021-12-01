@@ -4,11 +4,24 @@ const user = document.querySelector('.top-header-user');
 const validate = document.querySelector('.validate');
 const changeItem = document.querySelectorAll('.change-item');
 const validationForm = document.querySelectorAll('.validation-form');
-console.log(validationForm)
+const userMobile = document.querySelector('.mobile-top-header-user');
+const form2 = document.querySelector('#form-2');
+const fullName2 = document.querySelector('#form-2 #fullname')
+const password2 =document.querySelector('#form-2 #password')
+// form 3
+const form3 = document.querySelector('#form-3');
+const fullName3 = document.querySelector('#form-3 #fullname')
+const email3 =document.querySelector('#form-3 #email')
+const password3 =document.querySelector('#form-3 #password')
+const passwordRepeat =document.querySelector('#form-3 #password_repeat')
 let itemIndex =0;
-// const
 function startValidation(){
     handlechangeItem(itemIndex);
+}
+
+userMobile.onclick =(e)=>{
+    e.preventDefault();
+    validate.classList.add('open');
 }
 user.onclick = (e)=>{
     e.preventDefault();
@@ -40,76 +53,112 @@ function handlechangeItem(itemIndex){
         changeItem[itemIndex-1].classList.add('active');
         validationForm[itemIndex-1].style.display = "block";
 }
+
 startValidation();
 
 
-function validation(options){
+//Form 2 
+form2.oninput = function(){
+    setSuccess(fullName2);
+    setSuccess(password2);
+}
 
-    // Hàm thực hiện validate
-function validate(inputElement,rule){
-    const messageElement =inputElement.parentElement.querySelector(options.errorSelector);
-    const errormess = rule.test(inputElement.value)
-    if(errormess){
-        messageElement.innerText = errormess;
-       inputElement.parentElement.classList.add('invalid')
+form2.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    checkInputForm2();
+});
+
+function checkInputForm2(){
+    const usernameValue = fullName2.value.trim();
+    const passWordValue = password2.value.trim();
+    
+    if(usernameValue === ""){
+        setError(fullName2,'Username cannot be blank');
     }else{
-        messageElement.innerText = '';
-       inputElement.parentElement.classList.remove('invalid')
+        setSuccess(fullName2);
+    }
+    
+    if(passWordValue === ""){
+        setError(password2,'Userpassword cannot be blank');
+    }
+    else if(passWordValue.length <=6 ){
+        setError(password2,'Please type more than 6 characters');
+    }
+    else{
+        setSuccess(password2);
     }
 }
 
-// lấy Element của form cần validate
-  const formElement = $(options.form);
+// Form 3
 
-  if(formElement){
-    options.rules.forEach((rule) => {
-        const inputElement = formElement.querySelector(rule.selector)
-        if(inputElement){
-            //xử lý trường hợp blur ra khỏi input 
-            inputElement.onblur = function(){
-                validate(inputElement,rule)
-            }
-            //Xử lý mỗi khi người dùng nhập vào input
-            inputElement.oninput = function(){
-                const messageElement =
-                inputElement.parentElement.querySelector(options.errorSelector);
-                messageElement.innerText = '';
-                inputElement.parentElement.classList.remove('invalid')
-            }
-        }
-        
-    });
-  }
+form3.oninput = function(){
+    setSuccess(fullName3);
+    setSuccess(password3);
+    setSuccess(email3);
+    setSuccess(passwordRepeat);
 }
-// Định nghĩa rules
 
-// 1.khi có lỗi thì trả ra message lỗi
-// 2. Khi không có lỗi thì trả ra undefined
-// 
-validation.isRequired = function(selector){
-    return {
-        selector,
-        test : function(value){
-            return value.trim() ? undefined : 'Vui lòng nhập trường này';
-        }
-    };
+form3.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    checkInputForm3();
+});
+
+
+
+function checkInputForm3(){
+    const usernameValue = fullName3.value.trim();
+    const emailValue = email3.value.trim();
+    const passwordValue = password3.value.trim();
+    const passwordRepeatValue = passwordRepeat.value.trim();
+    
+    if(usernameValue === ""){
+        setError(fullName3,'Username cannot be blank');
+    }else{
+        setSuccess(fullName3);
+    }
+    
+    // email
+    if(emailValue === ""){
+        setError(email3,'UserEmail cannot be blank')
+    }
+    else if(!isEmail(emailValue)){
+        setError(email3,'Please types the correct format');
+    }else{
+        setSuccess(email3)
+    }
+    // pass
+    if(passwordValue === ""){
+        setError(password3,'Userpassword cannot be blank');
+    }
+    else if(passwordValue.length < 6 ){
+        setError(password3,'Please type more than 6 characters');
+    }
+    else{
+        setSuccess(password3);
+    }
+    // repeat
+    if(passwordRepeatValue === ""){
+        setError(passwordRepeat,'Userpassword cannot be blank');
+    }
+    else if(passwordRepeatValue == passwordValue ){
+        setSuccess(passwordRepeat);
+    }
+    else{
+        setError(passwordRepeat,'Password does not match');
+    }
 }
-// rule email
-validation.isEmail = function(selector){
-     return {
-        selector,
-        test : function(value){
-            const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return regex.test(value.toLowerCase()) ? undefined : 'Mời nhập đúng định dạng';
-        }
-    };
+
+function isEmail(email){
+    return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
-// rule islength
-validation.islength = function(selector,min){
-     return {
-        selector,
-        test : function(value){
-           return value.length >= min ? undefined : `Mời nhập đủ ${min} ký tự`
-        }
-    };
+
+function setError(input,message){
+    const formGroup = input.parentElement;
+    const formMessage = formGroup.querySelector('.form-message');
+    formMessage.innerText = message;
+}
+function setSuccess(input){
+    const formGroup = input.parentElement;
+    const formMessage = formGroup.querySelector('.form-message');
+    formMessage.innerText = '';
 }

@@ -326,7 +326,6 @@ Listsubnavinner.forEach(function(list,index){
         }
     }
     function handleChangslide(direction){
-
         if(direction == 1){
             positionX = positionX - (width);
             temp ++;  // 1 
